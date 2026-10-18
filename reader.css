@@ -21,3 +21,7 @@
 @keyframes reader-page-turn-next{0%{transform:rotateY(0deg);box-shadow:0 12px 24px rgba(65,47,25,.16),8px 10px 0 -1px #f4ecdf,14px 16px 0 -2px #ebe0cf,20px 22px 0 -3px #e1d3c0}46%{transform:rotateY(-82deg) translateX(-2%);box-shadow:22px 18px 28px rgba(65,47,25,.24),8px 10px 0 -1px #f4ecdf,14px 16px 0 -2px #ebe0cf,20px 22px 0 -3px #e1d3c0}100%{transform:rotateY(0deg);box-shadow:0 12px 24px rgba(65,47,25,.16),8px 10px 0 -1px #f4ecdf,14px 16px 0 -2px #ebe0cf,20px 22px 0 -3px #e1d3c0}}
 @keyframes reader-page-turn-prev{0%{transform:rotateY(0deg);box-shadow:0 12px 24px rgba(65,47,25,.16),8px 10px 0 -1px #f4ecdf,14px 16px 0 -2px #ebe0cf,20px 22px 0 -3px #e1d3c0}46%{transform:rotateY(82deg) translateX(2%);box-shadow:-22px 18px 28px rgba(65,47,25,.24),8px 10px 0 -1px #f4ecdf,14px 16px 0 -2px #ebe0cf,20px 22px 0 -3px #e1d3c0}100%{transform:rotateY(0deg);box-shadow:0 12px 24px rgba(65,47,25,.16),8px 10px 0 -1px #f4ecdf,14px 16px 0 -2px #ebe0cf,20px 22px 0 -3px #e1d3c0}}
 @media(prefers-reduced-motion:reduce){.reader-sheet.is-flipping-next,.reader-sheet.is-flipping-prev{animation:none}}
+
+/* Keep the navigation controls above the paper stack during the page-turn animation. */
+.reader-controls{position:relative;z-index:3;margin-top:28px;flex:0 0 auto}
+.reader-source{position:relative;z-index:3}

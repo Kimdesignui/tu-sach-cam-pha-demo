@@ -8,3 +8,9 @@
 .book-cover-reader .book-cover-veil{padding:18px 16px 16px}
 .book-cover-reader .book-cover-veil strong{font-size:clamp(20px,3vw,32px)}
 .book-card .book-cover{border-bottom:1px solid var(--line)}
+.book-card{cursor:pointer;transition:transform .24s ease,box-shadow .24s ease}
+.book-card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(54,43,28,.14)}
+.book-card .book-cover{overflow:hidden}
+.book-card .book-cover>img{transition:transform .38s cubic-bezier(.2,.7,.2,1)}
+.book-card:hover .book-cover>img{transform:scale(1.06)}
+.book-card .card-copy .button{pointer-events:none}
