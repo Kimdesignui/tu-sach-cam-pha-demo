@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>kho · Tủ sách Cẩm Phả</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="crm-original.css">
+<link rel="icon" href="favicon.svg">
+</head>
+<body data-crm-view="kho" data-crm-role="editor">
+
+<div class="headbar"><div class="in">
+  <div class="brand" onclick="go('home')" title="Về trang chủ"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMTI4IiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEyOCI+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjU0IiByPSI0NCIgZmlsbD0iI0YwOEE1RCIvPgo8cGF0aCBkPSJNNDIgNzAgTDYyIDM4IEw3NCA1MiBMOTIgMjIgTDExMiA1MCBMMTI2IDM0IEwxNTAgNzBaIiBmaWxsPSIjMEI0RjU3Ii8+CjxnIHN0cm9rZT0iI0ZCRjZFQyIgc3Ryb2tlLXdpZHRoPSIyLjQiIGZpbGw9Im5vbmUiPjxwYXRoIGQ9Ik04NiA3MCBMOTYgMzAgTDEwNCAzMCBMMTE0IDcwIE05MCA1NiBIMTEwIE05MiA0NCBIMTA4Ii8+PGNpcmNsZSBjeD0iMTAwIiBjeT0iMjciIHI9IjYiLz48L2c+CjxwYXRoIGQ9Ik0zNCA3MiBxMTEgLTcgMjIgMCB0MjIgMCB0MjIgMCB0MjIgMCB0MjIgMCB0MjIgMCIgc3Ryb2tlPSIjMUY3QThDIiBzdHJva2Utd2lkdGg9IjUiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8cGF0aCBkPSJNNDQgODIgcTExIC02IDIyIDAgdDIyIDAgdDIyIDAgdDIyIDAgdDIyIDAiIHN0cm9rZT0iIzFGN0E4QyIgc3Ryb2tlLXdpZHRoPSIzLjUiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgb3BhY2l0eT0iLjciLz4KPHRleHQgeD0iMTAwIiB5PSIxMTgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSInQmUgVmlldG5hbSBQcm8nLCdTZWdvZSBVSScsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyMSIgZm9udC13ZWlnaHQ9IjgwMCIgbGV0dGVyLXNwYWNpbmc9IjEuNSIgZmlsbD0iIzBCNEY1NyI+Q+G6qE0gUEjhuqI8L3RleHQ+Cjwvc3ZnPg==" alt="Biểu trưng Tủ sách Cẩm Phả"><div><b>Cẩm Phả Smart Library</b><span>Tri thức vùng mỏ – biển xanh</span></div></div>
+  <div class="brand-sub">Tủ sách điện tử phường Cẩm Phả</div>
+  <div class="head-right"><button class="btn sm newtog" id="newtog1" onclick="toggleNew()" aria-pressed="false"><span class="sw"></span>Chú giải chức năng</button><button class="btn sm" onclick="showIntro()">Giới thiệu</button><div class="rolebox"><label for="role">Vai trò</label><select id="role" onchange="setRole(this.value)"></select></div><div class="ward"><b>PHƯỜNG CẨM PHẢ</b><span>TỈNH QUẢNG NINH</span></div></div>
+</div><nav class="nav" id="nav" aria-label="Điều hướng"></nav><span id="today" hidden></span></div>
+<div class="app"><aside class="snav" id="snav" aria-label="Hệ thống nghiệp vụ"></aside><div class="appmain"><div class="ibar" id="ibar"></div><main class="main"><div class="wrap" id="main"></div></main></div></div>
+<div class="intro" id="intro" hidden></div>
+
+<button class="btn primary fab" id="fab" onclick="toggleScript()">Kịch bản trình diễn</button>
+<div class="script" id="script" hidden></div>
+<div id="modal-root"></div>
+<div class="toast" id="toast" hidden></div>
+
+<script src="crm-original.js"></script></body>
+</html>

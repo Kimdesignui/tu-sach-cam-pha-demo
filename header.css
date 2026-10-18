@@ -1,0 +1,412 @@
+/* Compact editorial header and refined Long Biên-inspired navigation. */
+body .topbar {
+  position: relative;
+  z-index: 1;
+  border-bottom: 0;
+  box-shadow: none;
+}
+
+body #app { padding-top: 0; }
+body > #app > .nav,
+body .nav {
+  width: 100%;
+  max-width: none;
+  margin-top: 0;
+  padding-left: max(28px, calc((100% - 1240px) / 2 + 28px));
+  padding-right: max(28px, calc((100% - 1240px) / 2 + 28px));
+  background: rgba(255,253,249,.97);
+  border-top: 1px solid rgba(230,216,195,.55);
+  border-bottom: 1px solid var(--line);
+  box-shadow: none;
+  overflow: visible;
+}
+
+/* The header scrolls away naturally; only this menu becomes fixed at the top. */
+body.nav-is-stuck .nav {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 1000;
+  box-shadow: 0 5px 18px rgba(11,42,74,.10);
+}
+body.nav-is-stuck .nav + .main { margin-top: 48px; }
+
+body .mobile-menu-toggle { display: none; }
+
+body[data-page="home"] .main {
+  padding-top: 0;
+}
+
+body[data-page="home"] .hero {
+  margin-top: 0;
+}
+
+body .topbar-inner {
+  padding-top: 9px;
+  padding-bottom: 0;
+  gap: 18px;
+}
+
+body .brand {
+  gap: 10px;
+}
+
+body .brand-cluster {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: none;
+}
+
+body .brand-divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(38, 55, 70, .18);
+}
+
+body .vhmt-brand {
+  display: inline-flex;
+  align-items: center;
+  width: 94px;
+  height: 40px;
+}
+
+body .vhmt-brand img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+body .brand > span {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+}
+
+body .brand-title,
+body .brand-sub {
+  display: block;
+}
+
+body .brand img {
+  width: auto;
+  height: 64px;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
+body .brand-title {
+  font-size: 17px;
+}
+
+body .brand-sub {
+  margin-top: 2px;
+  font-size: 10px;
+}
+
+body .section-name {
+  padding-left: 16px;
+  font-size: 14px;
+}
+
+body .nav {
+  margin-top: 0;
+  gap: 5px;
+  padding-bottom: 0;
+}
+
+body .nav a {
+  position: relative;
+  padding: 11px 15px;
+  border: 0;
+  border-radius: 0;
+  color: var(--ink);
+  background: transparent;
+  box-shadow: none;
+  transition: color .2s ease, border-color .2s ease;
+}
+
+body .nav a:hover {
+  color: var(--navy);
+  background: transparent;
+}
+
+body .nav a[aria-current="page"] {
+  color: var(--navy);
+  background: transparent;
+  box-shadow: none;
+}
+body .nav a[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 3px;
+  background: var(--rust);
+}
+
+/* Align section actions with the subtitle's actual text edge, not its default
+   paragraph bottom margin. */
+body .home-section .section-head p { margin-bottom: 0; }
+body .home-section .section-head > div:has(p) + a.button { margin-bottom: 10px; }
+
+body .shelf-cover {
+  position: relative;
+  overflow: hidden;
+}
+
+body .shelf-count {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 5px 9px;
+  border: 1px solid rgba(255, 253, 249, .72);
+  border-radius: 999px;
+  background: rgba(11, 42, 74, .9);
+  color: #fffdf9;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: .01em;
+  box-shadow: 0 4px 10px rgba(11, 42, 74, .2);
+}
+
+body .shelf-carousel { position: relative; }
+body .shelf-viewport { overflow: hidden; margin-inline: -2px; padding: 2px; }
+body .shelf-track { display: flex; gap: 18px; will-change: transform; }
+body .shelf-track .shelf-card { flex: 0 0 calc((100% - 54px) / 4); min-width: 0; }
+body .shelf-carousel-controls { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 16px; }
+body .shelf-carousel { min-width: 0; padding-bottom: 2px; }
+body .shelf-carousel-controls { position: relative; z-index: 2; min-height: 36px; }
+body .shelf-arrow { width: 34px; height: 34px; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: var(--white); color: var(--navy); font-size: 18px; line-height: 1; cursor: pointer; }
+body .shelf-arrow:hover { border-color: var(--rust); color: var(--rust); }
+body .shelf-position { min-width: 54px; color: var(--muted); font-size: 12px; font-weight: 800; letter-spacing: .08em; text-align: center; }
+
+@media (max-width: 640px) {
+  body #app { padding-top: 0; }
+  body .topbar-inner {
+    padding: 7px 16px 0;
+    gap: 10px;
+  }
+  body .mobile-menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 42px;
+    height: 38px;
+    margin-left: auto;
+    padding: 7px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--white);
+    color: var(--navy);
+    cursor: pointer;
+  }
+  body .mobile-menu-toggle span {
+    display: block;
+    width: 17px;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+  }
+  body .mobile-menu-toggle b { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  body .nav {
+    display: none;
+    width: 100%;
+    margin-top: 4px;
+    padding: 8px 16px 12px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    overflow: visible;
+    border-top: 1px solid var(--line);
+  }
+  body.nav-is-stuck .nav { position: static; box-shadow: none; }
+  body.nav-is-stuck .nav + .main { margin-top: 0; }
+  body.mobile-menu-open .nav { display: flex; }
+  body .nav a { padding: 11px 2px; border-bottom: 1px solid var(--line); }
+  body .nav a[aria-current="page"] { border-bottom-color: var(--rust); }
+  body .nav a[aria-current="page"]::after { display: none; }
+  body .nav-tools { width: 100%; margin-left: 0; padding: 10px 2px 0; flex-wrap: wrap; }
+  body .brand img { width: auto; height: 56px; }
+  body .brand-cluster { gap: 9px; }
+  body .brand-divider { height: 30px; }
+  body .vhmt-brand { width: 76px; height: 32px; }
+  body .brand-title { font-size: 15px; }
+  body .brand-sub { font-size: 8px; }
+  body .nav { margin-top: 0; padding: 0 16px 6px; gap: 3px; }
+  body .nav a { padding: 8px 12px; font-size: 13px; }
+  body .shelf-count { right: 7px; top: 7px; padding: 4px 7px; font-size: 10px; }
+  body .shelf-track { gap: 12px; }
+  body .shelf-track .shelf-card { flex-basis: calc((100% - 12px) / 2); }
+  body .home-section .section-head { align-items: flex-start; gap: 12px; }
+  body .home-section .section-head > div { min-width: 0; flex: 1 1 auto; }
+  body .home-section .section-head > a.button { margin-top: 24px; }
+  body .home-section .section-head > div:has(p) + a.button { margin-bottom: 0; }
+  body .shelf-carousel { padding-bottom: 0; }
+  body .shelf-carousel-controls { position: absolute; inset: 42% 6px auto; justify-content: space-between; margin: 0; pointer-events: none; }
+  body .shelf-carousel-controls .shelf-arrow { pointer-events: auto; background: rgba(255,253,249,.94); box-shadow: 0 4px 14px rgba(11,42,74,.15); }
+  body .shelf-carousel-controls .shelf-position { padding: 3px 8px; border-radius: 999px; background: rgba(255,253,249,.88); }
+
+  body .home-section .section-head > a.button {
+    width: 52px;
+    min-width: 52px;
+    height: 52px;
+    min-height: 52px;
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 0;
+    line-height: 1;
+    flex: none;
+  }
+
+  body .home-section .section-head > a.button::after {
+    content: "→";
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  /* Keep utility information compact and readable on narrow screens. */
+  body .band {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  body .band > div {
+    min-width: 0;
+    min-height: 96px;
+    padding: 16px 14px;
+  }
+  body .band strong {
+    font-size: 18px;
+    line-height: 1.15;
+  }
+  body .band span {
+    display: block;
+    font-size: 12px;
+    line-height: 1.35;
+  }
+  body .band small {
+    display: block;
+    font-size: 11px;
+    line-height: 1.35;
+  }
+  body .band > div:nth-child(even) { border-left: 1px solid var(--line); }
+  body .band > div:nth-child(n + 3) { border-top: 1px solid var(--line); }
+  body[data-page="home"] .band > div:nth-child(even) { border-left-color: rgba(255, 253, 249, .2); }
+  body[data-page="home"] .band > div:nth-child(n + 3) { border-top-color: rgba(255, 253, 249, .2); }
+}
+
+@media (min-width: 641px) and (max-width: 1000px) {
+  body .shelf-track .shelf-card { flex-basis: calc((100% - 36px) / 3); }
+}
+
+/* Footer brand keeps the Cẩm Phả identity visible beyond the public header. */
+body .footer-inner { align-items: center; }
+body .footer-brand { display: inline-flex; align-items: center; gap: 12px; color: #fff; text-decoration: none; }
+body .footer-brand img { display: block; width: 56px; height: 56px; object-fit: contain; }
+body .footer-brand span,
+body .footer-copy { display: flex; flex-direction: column; gap: 4px; }
+body .footer-brand strong,
+body .footer-copy strong { font-family: var(--display); font-weight: 800; }
+body .footer-brand small,
+body .footer-copy small,
+body .footer-meta { color: #d7c8ae; }
+body .footer-copy { margin-right: auto; }
+body .footer-divider { width: 1px; height: 34px; background: rgba(215, 200, 174, .35); }
+body .footer-vhmt { display: inline-flex; align-items: center; }
+body .footer-vhmt img { display: block; width: auto; height: 38px; object-fit: contain; }
+
+/* Give overview figures a clear reading rhythm on the library and home pages. */
+body .overview-stats {
+  row-gap: 0;
+  column-gap: 0;
+  padding: 10px 20px;
+  overflow: hidden;
+}
+body .overview-stats > strong,
+body .overview-stats > span {
+  padding: 13px 0;
+  border-bottom: 1px solid var(--line);
+}
+body .overview-stats > span {
+  padding-left: 16px;
+}
+body .overview-stats > :nth-last-child(-n + 2) { border-bottom: 0; }
+
+/* The strip below the hero acts as a visual destination board, not a plain list. */
+body[data-page="home"] .band {
+  position: relative;
+  overflow: hidden;
+  margin: 30px 0 64px;
+  padding: 0;
+  border: 1px solid rgba(11, 42, 74, .12);
+  border-radius: 26px;
+  background: linear-gradient(115deg, #0b2a4a 0%, #123f5c 62%, #b85432 150%);
+  box-shadow: 0 20px 42px rgba(11, 42, 74, .14);
+}
+body[data-page="home"] .band::before {
+  content: "";
+  position: absolute;
+  inset: auto -8% -70px 35%;
+  height: 150px;
+  border: 1px solid rgba(255, 253, 249, .17);
+  border-radius: 50%;
+  transform: rotate(-5deg);
+  box-shadow: 0 -18px 0 rgba(255, 253, 249, .06), 0 -36px 0 rgba(255, 253, 249, .04);
+  pointer-events: none;
+}
+body[data-page="home"] .band-stat,
+body[data-page="home"] .band-feature {
+  position: relative;
+  z-index: 1;
+  min-height: 148px;
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+}
+body[data-page="home"] .band-stat + .band-stat,
+body[data-page="home"] .band-feature { border-left: 1px solid rgba(255, 253, 249, .2); }
+body[data-page="home"] .band strong {
+  color: #ffd38b;
+  font: 800 42px/.95 var(--display);
+  letter-spacing: -.05em;
+}
+body[data-page="home"] .band span {
+  color: #fffdf9;
+  font: 800 15px/1.2 var(--display);
+}
+body[data-page="home"] .band small {
+  max-width: 20ch;
+  color: rgba(255, 253, 249, .72);
+  font-size: 12px;
+  line-height: 1.45;
+}
+body[data-page="home"] .band-feature strong { color: #f4a174; }
+
+/* The library landing page keeps the single source of truth in its overview. */
+body[data-page="library"] .library-intro .library-counts { display: none; }
+body[data-page="library"] .library-intro { display: block; }
+body[data-page="library"] > #app .shelf-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+@media (max-width: 640px) {
+  body .footer-inner { align-items: flex-start; gap: 18px; }
+  body .footer-brand img { width: 48px; height: 48px; }
+  body .footer-copy { margin-right: 0; }
+  body .footer-meta { width: 100%; }
+  body .footer-divider { display: none; }
+  body .footer-vhmt img { height: 32px; }
+  body[data-page="home"] .band { margin: 24px 0 48px; border-radius: 20px; }
+  body[data-page="home"] .band-stat,
+  body[data-page="home"] .band-feature { min-height: 128px; padding: 20px 16px; }
+  body[data-page="home"] .band strong { font-size: 32px; }
+  body[data-page="home"] .band span { font-size: 13px; }
+  body[data-page="home"] .band small { font-size: 11px; }
+  body[data-page="library"] > #app .shelf-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

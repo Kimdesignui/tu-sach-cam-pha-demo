@@ -1,0 +1,63 @@
+/* Full-bleed editorial hero, following the Long Biên composition. */
+html, body { overflow-x: hidden; }
+
+body .hero {
+  position: relative;
+  display: block;
+  width: 100vw;
+  min-height: 520px;
+  margin-left: calc(50% - 50vw);
+  margin-right: 0;
+  padding: 76px max(28px, calc((100vw - 1184px) / 2));
+  overflow: hidden;
+  isolation: isolate;
+}
+
+body .hero-art {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  min-height: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background-position: center right;
+  background-size: cover;
+}
+
+body .hero-art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(251,247,239,.98) 0%, rgba(251,247,239,.94) 31%, rgba(251,247,239,.66) 52%, rgba(251,247,239,.12) 78%, rgba(251,247,239,0) 100%);
+}
+
+body .hero-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(251,247,239,.18), rgba(251,247,239,0) 38%, rgba(11,42,74,.08));
+}
+
+body .hero > div:first-child {
+  position: relative;
+  z-index: 1;
+  width: min(650px, 58vw);
+}
+
+@media (max-width: 1000px) {
+  body .hero { min-height: 500px; padding-block: 64px; }
+  body .hero > div:first-child { width: min(620px, 72vw); }
+}
+
+@media (max-width: 640px) {
+  body .hero {
+    min-height: 620px;
+    padding: 48px 20px 36px;
+    margin-inline: -16px;
+    align-content: start;
+  }
+  body .hero > div:first-child { width: 100%; }
+  body .hero-art { background-position: 67% center; }
+  body .hero-art::before { background: linear-gradient(180deg, rgba(251,247,239,.98) 0%, rgba(251,247,239,.92) 42%, rgba(251,247,239,.28) 76%, rgba(251,247,239,.05)); }
+}

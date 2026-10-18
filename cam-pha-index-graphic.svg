@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-label="Minh họa đồ họa Cẩm Phả với núi đá, biển và giàn mỏ">
+  <rect width="900" height="560" fill="#0b2a4a"/>
+  <circle cx="726" cy="118" r="54" fill="#d9c6a5" opacity=".9"/>
+  <path d="M0 306 106 188l82 81 126-145 92 114 128-176 105 168 112-104 149 158v276H0Z" fill="#173c5e"/>
+  <path d="M0 344c112-39 199-35 304 2s194 39 297-3 190-42 299-6v223H0Z" fill="#d9c6a5"/>
+  <path d="M0 390c114-30 206-24 315 10s197 29 307-8 185-41 278-13v181H0Z" fill="#496b7d"/>
+  <path d="M0 438c112-24 198-15 310 14s206 22 311-13 187-37 279-13v134H0Z" fill="#0b2a4a"/>
+  <g fill="none" stroke="#a97b35" stroke-width="8" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M584 408V180m0 0 112 228m-112-228-112 228m57-118h114m-139 61h163"/>
+    <path d="M725 426h130M748 426v-63m84 63v-63M748 363h84" stroke-width="5"/>
+  </g>
+  <g fill="#a64d2c">
+    <rect x="423" y="408" width="66" height="38"/>
+    <rect x="504" y="398" width="47" height="48"/>
+    <rect x="560" y="412" width="42" height="34"/>
+  </g>
+  <g fill="none" stroke="#d9c6a5" stroke-width="3" opacity=".65">
+    <path d="M28 474c92-24 166-21 252 5s173 30 261 3 176-38 330-8"/>
+    <path d="M84 512c76-16 144-13 213 7s157 23 238 0 158-29 281-8"/>
+  </g>
+  <g fill="#fbf7ef" opacity=".75">
+    <circle cx="118" cy="91" r="4"/><circle cx="154" cy="67" r="3"/><circle cx="191" cy="111" r="4"/><circle cx="260" cy="68" r="3"/>
+  </g>
+</svg>

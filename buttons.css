@@ -1,0 +1,24 @@
+/* Long Biên button language, reused for the Cẩm Phả static pages. */
+button.button-3d,.button.button-3d,.button{--btn-top:#416f94;--btn-mid:#173c5e;--btn-bottom:#08233c;--btn-edge:#061a2d;isolation:isolate;color:#fff;background:linear-gradient(180deg,var(--btn-top) 0%,var(--btn-mid) 54%,var(--btn-bottom) 100%);border:3px solid #f7f3ea;border-bottom-color:#706c63;border-radius:999px;box-shadow:inset 0 2px 2px #ffffffc7,inset 0 -9px 13px #0000003d,0 4px 0 var(--btn-edge),0 10px 18px #081d3147;text-shadow:0 1px 2px #00000075;transition:transform .18s ease,filter .2s ease,box-shadow .18s ease;position:relative;overflow:hidden;}
+button.button-3d,.button.button-3d,.button{font-family:var(--body);}
+body .button{border-radius:999px;border:3px solid #f7f3ea;border-bottom-color:#706c63;background:linear-gradient(180deg,#4a789b,#173c5e 54%,#08233c);color:#fff;}
+body .button.primary{background:linear-gradient(180deg,#4a789b,#173c5e 54%,#08233c);border-color:#f7f3ea;border-bottom-color:#706c63;color:#fff;}
+body .button.accent{background:linear-gradient(180deg,#f3d694,#c49343 54%,#80531f);border-color:#f7f3ea;border-bottom-color:#706c63;color:#102b43;}
+button.button-3d::before,.button.button-3d::before,.button::before{content:"";z-index:0;pointer-events:none;background:linear-gradient(#ffffffc2,#ffffff1f);border-radius:999px;height:39%;position:absolute;top:7%;left:11%;right:11%;}
+button.button-3d>* ,.button.button-3d>* ,.button>*{position:relative;z-index:1;}
+button.button-3d.primary,.button.button-3d.primary,.button.primary{--btn-top:#416f94;--btn-mid:#173c5e;--btn-bottom:#08233c;--btn-edge:#051a2d;background:linear-gradient(180deg,var(--btn-top),var(--btn-mid) 54%,var(--btn-bottom));}
+button.button-3d.accent,.button.button-3d.accent,.button.accent{--btn-top:#f3d694;--btn-mid:#c49343;--btn-bottom:#80531f;--btn-edge:#5a3712;color:#102b43;background:linear-gradient(180deg,var(--btn-top),var(--btn-mid) 54%,var(--btn-bottom));text-shadow:0 1px #ffffff73;}
+button.button-3d.rust,.button.button-3d.rust{--btn-top:#dd8a65;--btn-mid:#ad5332;--btn-bottom:#702d1b;--btn-edge:#4d1c10;background:linear-gradient(180deg,var(--btn-top),var(--btn-mid) 54%,var(--btn-bottom));}
+.button:hover{border-color:#f7f3ea;filter:saturate(1.08) brightness(1.04);box-shadow:inset 0 2px 2px #ffffffd1,inset 0 -9px 13px #0003,0 6px 0 var(--btn-edge,#061a2d),0 14px 22px #081d314d;transform:translateY(-2px) scale(1.015);}
+.button:active{filter:brightness(.96);box-shadow:inset 0 2px 5px #0003,inset 0 -3px 7px #0000002e,0 1px 0 var(--btn-edge,#061a2d),0 4px 7px #081d3138;transform:translateY(4px) scale(.995);}
+.button:focus-visible{outline:3px solid #e7c991;outline-offset:4px;}
+.reader-controls button.button,.reader-controls button.button.primary{min-width:150px;min-height:48px;padding:11px 18px;background:linear-gradient(180deg,#4a789b,#173c5e 54%,#08233c);border-color:#f7f3ea;border-bottom-color:#706c63;color:#fff;box-shadow:inset 0 2px 2px #ffffffc7,inset 0 -9px 13px #0000003d,0 4px 0 #051a2d,0 10px 18px #081d3147;}
+.reader-controls .button:disabled{color:#6d665c;background:#d9cdbc;border-color:#f7f3ea;box-shadow:none;opacity:1;transform:none;}
+.voice-switch{background:#ffffff14;border:1px solid #ffffff4d;border-radius:13px;padding:5px;}
+.voice-switch button.button{min-height:43px;min-width:0;padding:9px 10px;background:linear-gradient(180deg,#4a789b,#173c5e 54%,#08233c);font-size:12px;}
+.voice-switch .button.active{background:linear-gradient(180deg,#dd8a65,#ad5332 54%,#702d1b);border-color:#f0d28f;--btn-edge:#4d1c10;}
+.reader-panel button.reader-action{min-height:48px;padding:12px 14px;background:linear-gradient(180deg,#f3d694,#c49343 54%,#80531f);color:#102b43;--btn-edge:#5a3712;text-shadow:0 1px #ffffff73;}
+.reader-panel .reader-action.secondary{background:linear-gradient(180deg,#4a789b,#173c5e 54%,#08233c);color:#fff;--btn-edge:#051a2d;text-shadow:0 1px 2px #00000075;}
+.reader-panel .reader-action:hover,.reader-controls .button:hover,.voice-switch .button:hover{filter:saturate(1.08) brightness(1.04);transform:translateY(-2px);}
+.reader-panel .reader-action:active,.reader-controls .button:active,.voice-switch .button:active{transform:translateY(4px) scale(.995);}
+@media(max-width:640px){.button{min-height:44px;padding-inline:16px;}.reader-controls .button{min-width:0;padding-inline:12px;font-size:12px;}}
