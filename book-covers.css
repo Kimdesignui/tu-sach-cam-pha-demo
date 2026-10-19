@@ -14,4 +14,8 @@
 .book-card .book-cover{overflow:hidden}
 .book-card .book-cover>img{transition:transform .38s cubic-bezier(.2,.7,.2,1)}
 .book-card:hover .book-cover>img{transform:scale(1.06)}
+.book-cover picture,.shelf-cover picture{display:block;width:100%;height:100%}
+.book-cover picture>img{display:block;width:100%;height:100%;object-fit:cover}
+.book-card .book-cover picture>img{transition:transform .38s cubic-bezier(.2,.7,.2,1)}
+.book-card:hover .book-cover picture>img{transform:scale(1.06)}
 .book-card .card-copy .button{pointer-events:none}
