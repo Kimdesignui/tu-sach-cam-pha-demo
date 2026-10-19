@@ -40,7 +40,7 @@
 .demo-flow-grid article{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:9px;align-items:baseline;padding:16px;border:1px solid var(--line);border-radius:14px;background:var(--white)}
 .demo-flow-grid b{display:block;color:var(--gold);font-size:12px}.demo-flow-grid strong{display:block;margin:0;color:var(--navy);font-size:15px}.demo-flow-grid span{grid-column:2;color:var(--muted);font-size:12px;line-height:1.4}
 .demo-intro-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:28px}
-.demo-intro-close{position:absolute;right:28px;top:24px;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:rgba(255,253,249,.9)}
+.demo-intro-close{position:absolute;right:28px;top:24px;z-index:3;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:rgba(255,253,249,.9);pointer-events:auto;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 .show-glossary [data-demo-help]{outline:2px dashed rgba(194,122,18,.35);outline-offset:4px}
 @media(max-width:900px){.nav-tools{margin-left:0;padding-left:0}.demo-flow-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){.demo-intro-card{padding:24px 22px 70px}.demo-intro-card::after{inset:58% 0 0;background:linear-gradient(0deg,rgba(251,247,239,.1),var(--paper) 86%),url('cam-pha-banner.jpg') center/cover no-repeat}.demo-intro-card:before{display:none}.demo-intro h2{font-size:32px}.demo-intro-lead{font-size:15px}.demo-flow-grid{grid-template-columns:1fr;max-width:440px}.demo-intro-close{right:18px;top:16px}}

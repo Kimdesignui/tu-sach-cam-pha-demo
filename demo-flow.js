@@ -115,7 +115,16 @@
     document.querySelector('[data-close-script]')?.addEventListener('click', () => { script.hidden = true; });
     document.querySelector('[data-open-intro]')?.addEventListener('click', () => { intro.hidden = false; document.body.classList.add('modal-open'); });
     document.querySelector('[data-toggle-glossary]')?.addEventListener('click', event => { const on = document.body.classList.toggle('show-glossary'); event.currentTarget.setAttribute('aria-pressed', String(on)); });
-    document.querySelector('.demo-intro-close')?.addEventListener('click', () => closeIntro(true));
+    const closeIntroButton = document.querySelector('.demo-intro-close');
+    const handleIntroClose = event => {
+      event.preventDefault();
+      event.stopPropagation();
+      closeIntro(true);
+    };
+    closeIntroButton?.addEventListener('click', handleIntroClose);
+    closeIntroButton?.addEventListener('pointerup', event => {
+      if (event.pointerType === 'touch') handleIntroClose(event);
+    });
     intro?.addEventListener('click', event => { if (event.target === intro) closeIntro(false); });
     document.querySelector('[data-role-switch]')?.addEventListener('change', event => { const role = roles.find(item => item[0] === event.target.value); if (role) navigate(role[2]); });
     mountGlossary();
